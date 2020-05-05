@@ -19,8 +19,6 @@ node {
         
         stage('Test') {
             steps {
-            	checkout scm
-            	RUN mvn dependency:go-offline -B
 				COPY  . .
 				RUN mvn test    
             }
