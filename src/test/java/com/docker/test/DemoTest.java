@@ -27,7 +27,7 @@ public class DemoTest {
 		
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://testdwh2.agmednet.net/");
-		
+		System.out.println(driver.getTitle());
 		Assert.assertEquals(driver.getTitle(), "AG Mednet Portal");
 
 	}
