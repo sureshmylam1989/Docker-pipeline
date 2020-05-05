@@ -8,7 +8,10 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 RUN apt-get update -y
 RUN apt-get install -y google-chrome-stable
 
-COPY  . /root/app/	
-WORKDIR /root/app
+#COPY  . /usr//app/	
+#WORKDIR /root/app
+
+COPY . /usr/src/Main
+WORKDIR /usr/src/Main
 
 RUN mvn test
