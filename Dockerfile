@@ -1,4 +1,4 @@
-FROM selenium/node-chrome-debug:3.141.59-20200409
+FROM selenium/standalone-chrome-debug:3.141.59-20200409
 LABEL authors=SeleniumHQ
 
 USER seluser
