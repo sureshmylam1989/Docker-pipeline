@@ -9,13 +9,3 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 
 RUN apt-get update -y
 RUN apt-get install -y google-chrome-stable
-
-WORKDIR /root/app
-
-COPY pom.xml .
-
-RUN mvn dependency:go-offline -B
-
-COPY  . .
-
-RUN mvn test
