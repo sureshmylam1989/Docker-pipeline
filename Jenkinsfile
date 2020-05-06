@@ -1,9 +1,9 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
         stage('Test') {
             steps {
-                echo "hello world"
+                docker.build("anandr72/nodeapp")
             }
         }
     }
