@@ -3,9 +3,10 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            docker.image("dockerServer").inside {
+	            agent {
+	                docker { image 'jenkins/jenkins' }
+	            }
             	echo "hello"
-            	}
             }
         }
     }
