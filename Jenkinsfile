@@ -4,13 +4,13 @@ pipeline {
         stage('Back-end') {
 
             steps {
-                sh 'mvn --version'
+                echo "hello"
             }
         }
         stage('Front-end') {
 
             steps {
-                sh 'node --version'
+                echo "world"
             }
         }
     }
