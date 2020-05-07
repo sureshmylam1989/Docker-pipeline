@@ -1,11 +1,9 @@
 pipeline {
-    agent { dockerfile true }
+    agent {label dockerServer}
     stages {
         stage('Test') {
             steps {
-	            agent {
-	                docker { image 'jenkins/jenkins' }
-	            }
+	            agent {dockerfile true }
             	echo "hello"
             }
         }
