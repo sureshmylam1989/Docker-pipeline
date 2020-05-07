@@ -1,12 +1,12 @@
 pipeline {
 	environment {
-	  STUFF = "/sbin:/usr/sbin:/usr/bin:/usr/local/bin:/bin"
+	  PATH = "/usr/local/bin:/usr/bin"
 	}
     agent { dockerfile true }
     stages {
         stage('Test') {
             steps {
-            	withEnv(["PATH+EXTRA=$STUFF"]) {
+            	withEnv(["PATH+EXTRA=$PATH"]) {
     				echo "hello"
   					}
                 
