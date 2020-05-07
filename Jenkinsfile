@@ -1,9 +1,21 @@
-node {
-    checkout scm
-
-    def customImage = docker.build("my-image:${env.BUILD_ID}")
-
-    customImage.inside {
-        sh 'make test'
+pipeline {
+    agent { dockerfile true }
+    stages {
+        stage('Back-end') {
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+        stage('Front-end') {
+            agent {
+                docker { image 'node:7-alpine' }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
     }
 }
