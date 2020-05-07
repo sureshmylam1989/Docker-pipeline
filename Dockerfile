@@ -9,3 +9,5 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
 
 RUN apt-get update -y
 RUN apt-get install -y google-chrome-stable
+
+ENV PATH = /usr/local/bin
