@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            	withEnv(['PATH+EXTRA=/usr/local/bin']) {
+            	withEnv(['PATH+EXTRA=/usr/bin']) {
     				echo "hello"
   				}
                 
