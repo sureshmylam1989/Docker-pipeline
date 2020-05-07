@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile true }
+    
     stages {
         stage('Back-end') {
             agent {
