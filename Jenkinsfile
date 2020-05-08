@@ -1,16 +1,10 @@
 pipeline {
-    agent {dockerfile true}
+    agent { dockerfile true }
     stages {
-        stage('Back-end') {
-
+        stage('Test') {
             steps {
-                echo "hello"
-            }
-        }
-        stage('Front-end') {
-
-            steps {
-                echo "world"
+            docker.withTool('dockerInstallation') { echo "hello" }
+            	
             }
         }
     }
