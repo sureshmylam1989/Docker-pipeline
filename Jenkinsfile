@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            docker.withTool('dockerInstallation') { echo "hello" }
-            	
+            	echo "hello"
             }
         }
     }
