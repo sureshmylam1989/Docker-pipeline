@@ -3,14 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            	WORKDIR /root/app
-
-				COPY pom.xml .
-				
-				RUN mvn dependency:go-offline -B
-				
-				COPY  . .
-				
+            	COPY  . /root/app/	
+				WORKDIR /root/app
 				RUN mvn test
             }
         }
