@@ -1,3 +1,1 @@
-FROM alpine:3.7
-
-RUN yum update
+FROM selenium/node-chrome-debug:3.5.3-boron
