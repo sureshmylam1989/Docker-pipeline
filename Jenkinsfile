@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            	COPY  . /tmp	
+            	COPY pom.xml  /tmp
 				WORKDIR /tmp
 				RUN mvn test
             }
