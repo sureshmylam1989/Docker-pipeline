@@ -4,8 +4,6 @@ pipeline {
         stage('Test') {
             steps {
 				echo "hello"
-				sh "ls /tmp"
-				sh "mvn --version"
             }
         }
     }
