@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-				mvn install /tmp/pom.xml
+				echo "hello"
+				ls /tmp
             }
         }
     }
