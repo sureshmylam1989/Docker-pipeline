@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-            	COPY  . /root/app/	
-				WORKDIR /root/app
+            	COPY  . /tmp	
+				WORKDIR /tmp
 				RUN mvn test
             }
         }
