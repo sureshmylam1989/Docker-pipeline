@@ -1,6 +1,10 @@
 FROM selenium/node-chrome-debug:3.5.3-boron
 
 USER root
+RUN apt-get update && apt-get install -y \
+curl
+
+
 RUN mkdir -p /usr/local/share/maven /usr/local/share/maven/ref \
   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c - \
