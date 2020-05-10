@@ -1,7 +1,10 @@
 FROM selenium/node-chrome-debug:3.5.3-boron
 
 USER root
-RUN apt-get update && apt-get install -y curl
+
+# Install prerequisites
+RUN apt-get update && apt-get install -y \
+curl
 
 
 RUN mkdir -p /usr/local/share/maven /usr/local/share/maven/ref \
