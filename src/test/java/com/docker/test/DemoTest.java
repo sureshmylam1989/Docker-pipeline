@@ -1,5 +1,6 @@
 package com.docker.test;
 
+import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
