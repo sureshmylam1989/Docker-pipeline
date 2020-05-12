@@ -1,9 +1,9 @@
 pipeline {
-    agent any
+    agent { dockerfile true }
     stages {
         stage('Test') {
             steps {
-				sh "mvn clean install"
+				echo "This is my first jenkins pipeline using docker"
             }
         }
     }
