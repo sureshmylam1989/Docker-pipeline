@@ -1,5 +1,7 @@
 FROM selenium/node-chrome-debug:3.5.3-boron
 
+RUN sudo apt-get install openjdk-8-jdk
+
 USER root
 
 # Install prerequisites
