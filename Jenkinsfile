@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-				sh "mvn test"
+				echo "This is my first jenkins pipeline using docker"
             }
         }
     }
