@@ -5,22 +5,18 @@
 	<groupId>Docker</groupId>
 	<artifactId>DockerProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -29,7 +25,6 @@
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
